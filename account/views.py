@@ -177,16 +177,16 @@ class SendOTP(APIView):
 			user_dict["user_id"] = user.id
 			user_dict["otp"] = otpString
 
-			# reqUrl = 'https://www.sms4india.com/api/v1/sendCampaign'
-			# req_params = {
-			# 'apikey':'9MQTVC4LEXQEXN5MVNQX04TAHD967WCQ',
-			# 'secret':'K4AA3OPX9CG5RV3U',
-			# 'usetype':'stage',
-			# 'phone': user.phone,
-			# 'message':'Your OTP is ' + str(otpString) + ' for your ' + str(user.aadhar) + ' aadhar number login credential',
-			# 'senderid':'9657445206'
-			# }
-			# requests.post(reqUrl, req_params)
+			reqUrl = 'https://www.sms4india.com/api/v1/sendCampaign'
+			req_params = {
+			'apikey':'9MQTVC4LEXQEXN5MVNQX04TAHD967WCQ',
+			'secret':'K4AA3OPX9CG5RV3U',
+			'usetype':'stage',
+			'phone': user.phone,
+			'message':'Your OTP is ' + str(otpString) + ' for your ' + str(user.aadhar) + ' aadhar number login credential',
+			'senderid':'9657445206'
+			}
+			requests.post(reqUrl, req_params)
 
 			return Response({
 								"status":True, "status_code" : HTTP_200_OK, 
