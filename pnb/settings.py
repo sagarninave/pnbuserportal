@@ -25,7 +25,7 @@ SECRET_KEY = 'v&t*=(0jt0*&d3^#y7m^t$p($yojk==z3zcq0n_6va1dt%a^5u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["pnbuserportal.herokuapp.com","127.0.0.1"]
 
 
 # Application definition
