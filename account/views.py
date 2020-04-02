@@ -303,6 +303,11 @@ class Users(APIView):
 				"status_code" : HTTP_200_OK, 
 				"users":UserListSerializer(users, many=True).data
 				})
+		return Response({
+			"status":True, 
+			"status_code" : HTTP_200_OK, 
+			"message":"You Are Member User"
+			})
 
 
 class GetUser(APIView):
